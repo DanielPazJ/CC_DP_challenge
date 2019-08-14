@@ -1,3 +1,5 @@
+import Members.People;
+import Members.PeopleFactory;
 import com.github.javafaker.Faker;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -30,7 +32,7 @@ public class Main {
         chocolateMilk.addItems(generateItemsList(54));
 
         for(int i=0; i<5; i++){
-            employeesList.add(peopleFactory.createEmployee());
+            employeesList.add(peopleFactory.newPerson(false,0,(byte)0));
         }
 
         productsList.add(vanillaCookie);
@@ -41,16 +43,16 @@ public class Main {
 
         //store.openStore();
         List<People> clients = new ArrayList<>();
-        clients.add(peopleFactory.createClient(13.5,(byte) 23));
-        clients.add(peopleFactory.createClient (10.8,(byte)31));
-        clients.add(peopleFactory.createClient ( 9.1, (byte)19));
-        clients.add(peopleFactory.createClient ( 27.8, (byte)25));
-        clients.add(peopleFactory.createClient ( 5.0, (byte)37));
-        clients.add(peopleFactory.createClient ( 14.6, (byte) 47));
-        clients.add(peopleFactory.createClient ( 11.2, (byte) 81));
-        clients.add(peopleFactory.createClient ( 10.1, (byte) 42));
-        clients.add(peopleFactory.createClient ( 13.0, (byte) 19));
-        clients.add(peopleFactory.createClient ( 43.2, (byte) 33));
+        clients.add(peopleFactory.newPerson(true,13.5,(byte) 23));
+        clients.add(peopleFactory.newPerson (true,10.8,(byte)31));
+        clients.add(peopleFactory.newPerson (true, 9.1, (byte)19));
+        clients.add(peopleFactory.newPerson (true, 27.8, (byte)25));
+        clients.add(peopleFactory.newPerson (true, 5.0, (byte)37));
+        clients.add(peopleFactory.newPerson( true,14.6, (byte) 47));
+        clients.add(peopleFactory.newPerson(true, 11.2, (byte) 81));
+        clients.add(peopleFactory.newPerson ( true,10.1, (byte) 42));
+        clients.add(peopleFactory.newPerson (true, 13.0, (byte) 19));
+        clients.add(peopleFactory.newPerson ( true,43.2, (byte) 33));
 
        // store.sell(vanillaCookie, clients.get(0));
        // store.sell(vanillaCookie, clients.get(0));

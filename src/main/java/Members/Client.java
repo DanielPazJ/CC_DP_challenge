@@ -1,5 +1,6 @@
+package Members;
 
-public class Client extends People{
+public class Client extends People {
 
     public double budget;
     public byte age;

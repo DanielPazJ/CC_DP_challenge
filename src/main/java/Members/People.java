@@ -1,3 +1,5 @@
+package Members;
+
 import com.github.javafaker.Faker;
 
 public abstract class People {
