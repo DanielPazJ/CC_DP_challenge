@@ -31,11 +31,11 @@ public class Main {
         employeesIds.add(generateId());
         employeesIds.add(generateId());
 
-    employeesAddresses.add(generateAddress());
-    employeesAddresses.add(generateAddress());
-    employeesAddresses.add(generateAddress());
-    employeesAddresses.add(generateAddress());
-    employeesAddresses.add(generateAddress());
+        employeesAddresses.add(generateAddress());
+        employeesAddresses.add(generateAddress());
+        employeesAddresses.add(generateAddress());
+        employeesAddresses.add(generateAddress());
+        employeesAddresses.add(generateAddress());
 
         employeesphones.add(generatePhone());
         employeesphones.add(generatePhone());
@@ -66,26 +66,26 @@ public class Main {
         clients.add(new client(generateName(), generateId(), generateAddress(), 13.5, BigInteger.valueOf(23), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 10.8, BigInteger.valueOf(31), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 9.1, BigInteger.valueOf(19), generatePhone(), new ArrayList<>()));
-            clients.add(new client(generateName(), generateId(), generateAddress(), 27.8, BigInteger.valueOf(25), generatePhone(), new ArrayList<>()));
+        clients.add(new client(generateName(), generateId(), generateAddress(), 27.8, BigInteger.valueOf(25), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 5.0, BigInteger.valueOf(37), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 14.6, BigInteger.valueOf(47), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 11.2, BigInteger.valueOf(81), generatePhone(), new ArrayList<>()));
-    clients.add(new client(generateName(), generateId(), generateAddress(), 10.1, BigInteger.valueOf(42), generatePhone(), new ArrayList<>()));
+        clients.add(new client(generateName(), generateId(), generateAddress(), 10.1, BigInteger.valueOf(42), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 13.0, BigInteger.valueOf(19), generatePhone(), new ArrayList<>()));
         clients.add(new client(generateName(), generateId(), generateAddress(), 43.2, BigInteger.valueOf(33), generatePhone(), new ArrayList<>()));
 
-       store.sell(vanillaCookie,clients.get(0));
+        store.sell(vanillaCookie,clients.get(0));
         store.sell(vanillaCookie,clients.get(0));
         store.sell(vanillaCookie,clients.get(4));
         store.sell(ChocolateCookie,clients.get(4));
         store.sell(vanillaCookie,clients.get(7));
-           store.sell(vanillaCookie,clients.get(7));
+        store.sell(vanillaCookie,clients.get(7));
         store.sell(vanillaCookie,clients.get(7));
         store.sell(vanillaCookie,clients.get(3));
         store.sell(chocolateMilk,clients.get(9));
         store.sell(ChocolateCookie,clients.get(9));
         store.sell(ChocolateCookie,clients.get(9));
-   store.sell(ChocolateCookie,clients.get(1));
+        store.sell(ChocolateCookie,clients.get(1));
 
         store.closeStore();
 
