@@ -1,23 +1,12 @@
-import java.math.BigInteger;
-import java.util.List;
 
-public class Client {
-    public String name;
-    public String id;
-    public String address;
+public class Client extends People{
+
     public double budget;
-    public BigInteger age;
-    public String phone;
-    public List<Item> itemsPurchased;
+    public byte age;
 
-    public Client(String name, String id, String address, double budget, BigInteger age, String phone, List<Item> itemsPurchased) {
-        this.name = name;
-        this.id = id;
-        this.address = address;
+    public Client(double budget, byte age) {
         this.budget = budget;
         this.age = age;
-        this.phone = phone;
-        this.itemsPurchased = itemsPurchased;
     }
 
     public void buy(){

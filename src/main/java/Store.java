@@ -30,7 +30,7 @@ public class Store {
             if(product.equals(productsList.get(i))){
                 price = productsList.get(i).getPrice();
                 client.budget = client.budget - price;
-                client.itemsPurchased.add(productsList.get(i).removeItem());
+                //client.itemsPurchased.add(productsList.get(i).removeItem());
 
             }
         }
