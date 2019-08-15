@@ -9,12 +9,12 @@ public class Product {
     public String quantity;
     public Queue<Item> items;
 
-    public Product(String name, String price, String quantity, Queue<Item> items) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-        this.items = items;
-    }
+//    public Product(String name, String price, String quantity, Queue<Item> items) {
+//        this.name = name;
+//        this.price = price;
+//        this.quantity = quantity;
+//        this.items = items;
+//    }
 
     public double getPrice(){
         return Double.valueOf(this.price);
