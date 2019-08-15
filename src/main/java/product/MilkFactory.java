@@ -16,5 +16,11 @@ public  class MilkFactory extends FlavorFactory{
         return new Milk("Chocolate Milk",  "3.1", "54", new LinkedList<Item>());
     }
 
+    @Override
+    public Product createCoconutProduct() {
+
+        return new Milk("Coconut Milk",  "3.4", "32", new LinkedList<Item>());
+    }
+
 
 }

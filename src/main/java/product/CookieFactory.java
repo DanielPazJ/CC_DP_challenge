@@ -12,4 +12,8 @@ public class CookieFactory extends FlavorFactory {
     public Product createChocolateProduct(){
         return new Cookie("Chocolote Cookie", "2.0","17", new LinkedList<Item>());
     }
+    @Override
+    public Product createCoconutProduct(){
+        return new Cookie("Coconut Cookie", "1.5","15", new LinkedList<Item>());
+    }
 }

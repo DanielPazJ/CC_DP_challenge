@@ -12,4 +12,8 @@ public class IcecreamFactory extends FlavorFactory {
     public Product createChocolateProduct(){
         return new Icecream("Chocolote Icecream", "3.5","15", new LinkedList<Item>());
     }
+    @Override
+    public Product createCoconutProduct(){
+        return new Icecream("Coconut Icecream", "3.2","15", new LinkedList<Item>());
+    }
 }
