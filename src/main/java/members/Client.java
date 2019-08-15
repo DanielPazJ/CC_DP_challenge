@@ -1,4 +1,4 @@
-package Members;
+package members;
 
 public class Client extends People {
 
