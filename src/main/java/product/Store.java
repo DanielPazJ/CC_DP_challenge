@@ -1,11 +1,6 @@
 package product;
 
-import members.Client;
-import product.Product;
 import members.People;
-import java.time.Period;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Store {
@@ -22,7 +17,7 @@ public class Store {
     }
 
     public void openStore(){
-        System.out.println("product.Store is open");
+        System.out.println("Store is open");
     }
     public void closeStore(){
         System.out.println("Closing store");

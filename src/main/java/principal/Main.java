@@ -15,9 +15,11 @@ public class Main {
 
         List <People> employeesList = new ArrayList<>();
         List<Product> productList = new ArrayList<>();
+
+
         FlavorFactory cookieFactory = new CookieFactory();
         FlavorFactory milkFactory = new MilkFactory();
-
+        FlavorFactory icecreamFactory = new IcecreamFactory();
 
         for(int i=0; i<5; i++){
            employeesList.add(new BuilderEmployee().addName().addPhone().addAddress().addId().build());
@@ -47,13 +49,76 @@ public class Main {
         productList.add(vanillaMilk);
         productList.add(chocolateMilk);
 
+        Product vanillaIcecream = icecreamFactory.createVanillaProduct();
+        Product chocolateIcecream = icecreamFactory.createChocolateProduct();
+
+        productList.add(vanillaIcecream);
+        productList.add(chocolateIcecream);
+
         Store store = new Store(employeesList, "store", productList);
 
         store.openStore();
         Employee employee = (Employee)store.getEmployees().get(0);
         employee.sell(vanillaCookie, (Client) clientsList.get(0), store);
         employee = (Employee)store.getEmployees().get(1);
+        employee.sell(vanillaIcecream, (Client) clientsList.get(2), store);
+        employee = (Employee)store.getEmployees().get(3);
+        employee.sell(chocolateMilk, (Client) clientsList.get(6), store);
+        employee = (Employee)store.getEmployees().get(4);
+        employee.sell(chocolateIcecream, (Client) clientsList.get(7), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(vanillaMilk, (Client) clientsList.get(8), store);
+        employee = (Employee)store.getEmployees().get(3);
+        employee.sell(vanillaCookie, (Client) clientsList.get(5), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(vanillaIcecream, (Client) clientsList.get(4), store);
+        employee = (Employee)store.getEmployees().get(4);
+        employee.sell(vanillaCookie, (Client) clientsList.get(3), store);
+        employee = (Employee)store.getEmployees().get(1);
+        employee.sell(chocolateMilk, (Client) clientsList.get(2), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(chocolateCookie, (Client) clientsList.get(1), store);
+        employee = (Employee)store.getEmployees().get(4);
+        employee.sell(chocolateIcecream, (Client) clientsList.get(9), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(vanillaCookie, (Client) clientsList.get(8), store);
+        employee = (Employee)store.getEmployees().get(3);
+        employee.sell(chocolateMilk, (Client) clientsList.get(7), store);
+        employee = (Employee)store.getEmployees().get(1);
+        employee.sell(chocolateIcecream, (Client) clientsList.get(5), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(vanillaMilk, (Client) clientsList.get(2), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(vanillaIcecream, (Client) clientsList.get(4), store);
+        employee = (Employee)store.getEmployees().get(4);
         employee.sell(vanillaMilk, (Client) clientsList.get(1), store);
+        employee = (Employee)store.getEmployees().get(3);
+        employee.sell(vanillaCookie, (Client) clientsList.get(0), store);
+        employee = (Employee)store.getEmployees().get(1);
+        employee.sell(chocolateMilk, (Client) clientsList.get(8), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(chocolateCookie, (Client) clientsList.get(4), store);
+        employee = (Employee)store.getEmployees().get(1);
+        employee.sell(chocolateCookie, (Client) clientsList.get(5), store);
+        employee = (Employee)store.getEmployees().get(4);
+        employee.sell(vanillaIcecream, (Client) clientsList.get(4), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(chocolateMilk, (Client) clientsList.get(2), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(chocolateIcecream, (Client) clientsList.get(1), store);
+        employee = (Employee)store.getEmployees().get(1);
+        employee.sell(vanillaMilk, (Client) clientsList.get(0), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(vanillaCookie, (Client) clientsList.get(2), store);
+        employee = (Employee)store.getEmployees().get(3);
+        employee.sell(vanillaIcecream, (Client) clientsList.get(1), store);
+        employee = (Employee)store.getEmployees().get(2);
+        employee.sell(vanillaCookie, (Client) clientsList.get(3), store);
+        employee = (Employee)store.getEmployees().get(4);
+        employee.sell(chocolateMilk, (Client) clientsList.get(6), store);
+        employee = (Employee)store.getEmployees().get(0);
+        employee.sell(chocolateCookie, (Client) clientsList.get(0), store);
+
         store.closeStore();
 
         for( int i=0; i < clientsList.size() ; i++ ){

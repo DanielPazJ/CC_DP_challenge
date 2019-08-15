@@ -1,7 +1,6 @@
 package product;
 
 import Util.Util;
-
 import java.util.Queue;
 
 public class Milk extends Product {

@@ -3,9 +3,9 @@ package product;
 import Util.Util;
 import java.util.Queue;
 
-public class Cookie extends Product {
+public class Icecream extends Product {
 
-    public Cookie(String name, String price, String quantity, Queue<Item> items){
+    public Icecream (String name, String price, String quantity, Queue<Item> items){
         super.name = name;
         super.price = price;
         super.quantity = quantity;
