@@ -2,50 +2,37 @@ package product;
 
 import members.Client;
 import product.Product;
-
+import members.People;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Store {
-    public List<String> employeesNames = new LinkedList<String>();
-    public List<String> employeesIds = new LinkedList<>();
-    public List<String> employeesAddresses = new ArrayList<>();
-    public List<String> employeesphones = new LinkedList<>();
-    public String nombre;
-    public List<Product> productList;
 
-    public Store(List<String> employeesNames, List<String> employeesIds, List<String> employeesAddresses, List<String> employeesphones, String nombre, List<Product> productList) {
-        this.employeesNames = employeesNames;
-        this.employeesIds = employeesIds;
-        this.employeesAddresses = employeesAddresses;
-        this.employeesphones = employeesphones;
-        this.nombre = nombre;
+    private List<People> employees = new LinkedList<People>();
+    private String name;
+    public List<Product> productList;
+    private static Store store;
+
+    public Store(List<People> employees,  String name, List<Product> productList) {
+        this.employees = employees;
+        this.name= name;
         this.productList = productList;
     }
 
     public void openStore(){
         System.out.println("product.Store is open");
     }
-
-    public void sell(Product product, Client client){
-        double price = 0;
-        for (int i = 0; i< productList.size(); i++){
-            if(product.equals(productList.get(i))){
-                price = productList.get(i).getPrice();
-                client.budget = client.budget - price;
-                //client.itemsPurchased.add(productList.get(i).removeItem());
-
-            }
-        }
-        if (price==0){
-            System.out.println("That product isn't exists on this store");
-        }
-    }
-
     public void closeStore(){
         System.out.println("Closing store");
+
     }
+
+    public List<Product> getProductList(){
+        return this.productList;
+    }
+
 
 }
 

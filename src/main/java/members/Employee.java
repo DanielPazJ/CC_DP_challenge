@@ -1,4 +1,6 @@
 package members;
+import product.Store;
+import product.Product;
 
 public class Employee extends People {
 
@@ -31,8 +33,18 @@ public class Employee extends People {
         return phone;
     }
 
-    public void setPhone (String phone){
-        this.phone=phone;
+    public void sell(Product product, Client client, Store store){
+        double price = 0;
+        for (int i=0; i< store.getProductList().size(); i++){
+            if(product.equals(store.getProductList().get(i))){
+                price = store.getProductList().get(i).getPrice();
+                client.budget = client.budget - price;
+                client.itemsPurchased.add(store.getProductList().get(i).removeItem());
+            }
+        }
+        if (price==0){
+            System.out.println("That product isn't exists on this store");
+        }
     }
 
 }

@@ -53,16 +53,16 @@ public class Main {
 
         //store.openStore();
         List<People> clientsList = new ArrayList<>();
-        clientsList.add(new BuilderClient(13.5,(byte) 23).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(10.8,(byte) 31).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(9.1,(byte) 19).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(27.8,(byte) 25).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(5.0,(byte) 37).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(14.6,(byte) 47).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(11.2,(byte) 81).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(10.1,(byte) 42).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(13.0,(byte) 19).addName().addPhone().addAddress().addId().addBudget().addAge().build());
-        clientsList.add(new BuilderClient(43.2,(byte) 33).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(13.5,(byte) 23,  new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(10.8,(byte) 31, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(9.1,(byte) 19, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(27.8,(byte) 25, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(5.0,(byte) 37, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge() .addItemlist().build());
+        clientsList.add(new BuilderClient(14.6,(byte) 47, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addItemlist().addAge().build());
+        clientsList.add(new BuilderClient(11.2,(byte) 81, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(10.1,(byte) 42, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(13.0,(byte) 19, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
+        clientsList.add(new BuilderClient(43.2,(byte) 33, new ArrayList<>()).addName().addPhone().addAddress().addId().addBudget().addAge().addItemlist().build());
         //clients.add(peopleFactory.newPerson(true,13.5,(byte) 23));
         //clients.add(peopleFactory.newPerson (true,10.8,(byte)31));
         //clients.add(peopleFactory.newPerson (true, 9.1, (byte)19));
@@ -101,7 +101,9 @@ public class Main {
         productList.add(vanillaMilk);
         productList.add(chocolateMilk);
 
-
+        Store store = new Store(employeesList, "tiendita", productList);
+        store.openStore();
+        
 
     }
 

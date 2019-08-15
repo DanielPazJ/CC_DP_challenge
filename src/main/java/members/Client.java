@@ -1,13 +1,17 @@
 package members;
+ import product.Item;
+import java.util.List;
 
 public class Client extends People {
 
     public double budget;
     public byte age;
+    public List<Item> itemsPurchased;
 
-    public Client(double budget, byte age) {
+    public Client(double budget, byte age, List<Item> itemsPurchased) {
         this.budget = budget;
         this.age = age;
+        this.itemsPurchased=itemsPurchased;
         }
         public String getId () {
             return id;
