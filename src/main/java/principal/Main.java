@@ -6,10 +6,8 @@ import javafx.util.Builder;
 import members.People;
 import members.PeopleFactory;
 import com.github.javafaker.Faker;
-import product.Item;
-import product.Product;
-import product.Cookie;
-import product.Milk;
+import product.*;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,35 +18,37 @@ public class Main {
     //static PeopleFactory peopleFactory=new PeopleFactory();
 
     public static void main(String args[]) {
+
         List <People> employeesList = new ArrayList<>();
         List<Product> productList = new ArrayList<>();
         Queue<Item> vanillaCookie_items = new LinkedList<Item>();
         Queue<Item> chocolateCookie_items = new LinkedList<Item>();
         Queue<Item> lactoseFreeMilk_items = new LinkedList<Item>();
         Queue<Item> NormalMilk_items = new LinkedList<Item>();
+        FlavorFactory cookieFactory = new CookieFactory();
+        FlavorFactory milkFactory = new MilkFactory();
 
-
-        Product vanillaCookie = new Cookie("vanilla cookie", "1.5", "24", vanillaCookie_items);
-        vanillaCookie.addItems(generateItemsList(24));
-
-        Product ChocolateCookie = new Cookie("chocolate cookie", "2.0", "17", chocolateCookie_items);
-        ChocolateCookie.addItems(generateItemsList(17));
-
-        Product VanillaMilk = new Milk("vanilla milk", "3.6", "22", lactoseFreeMilk_items);
-        VanillaMilk.addItems(generateItemsList(22));
-
-        Product chocolateMilk = new Milk("chocolate milk", "3.1", "54", NormalMilk_items);
-        chocolateMilk.addItems(generateItemsList(54));
+//        Product vanillaCookie = new Cookie("vanilla cookie", "1.5", "24", vanillaCookie_items);
+//        vanillaCookie.addItems(generateItemsList(24));
+//
+//        Product ChocolateCookie = new Cookie("chocolate cookie", "2.0", "17", chocolateCookie_items);
+//        ChocolateCookie.addItems(generateItemsList(17));
+//
+//        Product VanillaMilk = new Milk("vanilla milk", "3.6", "22", lactoseFreeMilk_items);
+//        VanillaMilk.addItems(generateItemsList(22));
+//
+//        Product chocolateMilk = new Milk("chocolate milk", "3.1", "54", NormalMilk_items);
+//        chocolateMilk.addItems(generateItemsList(54));
 
         for(int i=0; i<5; i++){
            //employeesList.add(peopleFactory.newPerson(false,0,(byte)0));
            employeesList.add(new BuilderEmployee().addName().addPhone().addAddress().addId().build());
         }
 
-        productList.add(vanillaCookie);
-        productList.add(ChocolateCookie);
-        productList.add(VanillaMilk);
-        productList.add(chocolateMilk);
+//        productList.add(vanillaCookie);
+//        productList.add(ChocolateCookie);
+//        productList.add(VanillaMilk);
+//        productList.add(chocolateMilk);
         //product.Store store = new product.Store(employeesNames, employeesIds, employeesAddresses, employeesphones, "tiendita", productList);
 
         //store.openStore();
@@ -88,6 +88,20 @@ public class Main {
        // store.sell(ChocolateCookie, clients.get(1));
 
        // store.closeStore();
+
+        Product vanillaCookie = cookieFactory.createVanillaProduct();
+        Product chocolateCookie = cookieFactory.createChocolateProduct();
+
+        productList.add(vanillaCookie);
+        productList.add(chocolateCookie);
+
+        Product vanillaMilk = milkFactory.createVanillaProduct();
+        Product chocolateMilk = milkFactory.createChocolateProduct();
+
+        productList.add(vanillaMilk);
+        productList.add(chocolateMilk);
+
+
 
     }
 

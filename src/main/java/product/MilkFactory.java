@@ -2,7 +2,7 @@ package product;
 
 import java.util.LinkedList;
 
-public abstract class MilkFactory extends FlavorFactory{
+public  class MilkFactory extends FlavorFactory{
 
     @Override
     public Product createVanillaProduct() {
