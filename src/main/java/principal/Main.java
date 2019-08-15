@@ -1,5 +1,6 @@
 package principal;
 
+import builders.BuilderClient;
 import builders.BuilderEmployee;
 import javafx.util.Builder;
 import members.People;
@@ -16,7 +17,7 @@ import java.util.Queue;
 
 public class Main {
     static Faker faker = new Faker();
-    static PeopleFactory peopleFactory=new PeopleFactory();
+    //static PeopleFactory peopleFactory=new PeopleFactory();
 
     public static void main(String args[]) {
         List <People> employeesList = new ArrayList<>();
@@ -51,17 +52,27 @@ public class Main {
         //product.Store store = new product.Store(employeesNames, employeesIds, employeesAddresses, employeesphones, "tiendita", productList);
 
         //store.openStore();
-        List<People> clients = new ArrayList<>();
-        clients.add(peopleFactory.newPerson(true,13.5,(byte) 23));
-        clients.add(peopleFactory.newPerson (true,10.8,(byte)31));
-        clients.add(peopleFactory.newPerson (true, 9.1, (byte)19));
-        clients.add(peopleFactory.newPerson (true, 27.8, (byte)25));
-        clients.add(peopleFactory.newPerson (true, 5.0, (byte)37));
-        clients.add(peopleFactory.newPerson( true,14.6, (byte) 47));
-        clients.add(peopleFactory.newPerson(true, 11.2, (byte) 81));
-        clients.add(peopleFactory.newPerson ( true,10.1, (byte) 42));
-        clients.add(peopleFactory.newPerson (true, 13.0, (byte) 19));
-        clients.add(peopleFactory.newPerson ( true,43.2, (byte) 33));
+        List<People> clientsList = new ArrayList<>();
+        clientsList.add(new BuilderClient(13.5,(byte) 23).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(10.8,(byte) 31).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(9.1,(byte) 19).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(27.8,(byte) 25).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(5.0,(byte) 37).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(14.6,(byte) 47).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(11.2,(byte) 81).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(10.1,(byte) 42).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(13.0,(byte) 19).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        clientsList.add(new BuilderClient(43.2,(byte) 33).addName().addPhone().addAddress().addId().addBudget().addAge().build());
+        //clients.add(peopleFactory.newPerson(true,13.5,(byte) 23));
+        //clients.add(peopleFactory.newPerson (true,10.8,(byte)31));
+        //clients.add(peopleFactory.newPerson (true, 9.1, (byte)19));
+        //clients.add(peopleFactory.newPerson (true, 27.8, (byte)25));
+        //clients.add(peopleFactory.newPerson (true, 5.0, (byte)37));
+        //clients.add(peopleFactory.newPerson( true,14.6, (byte) 47));
+        //clients.add(peopleFactory.newPerson(true, 11.2, (byte) 81));
+        //clients.add(peopleFactory.newPerson ( true,10.1, (byte) 42));
+        //clients.add(peopleFactory.newPerson (true, 13.0, (byte) 19));
+        //clients.add(peopleFactory.newPerson ( true,43.2, (byte) 33));
 
        // store.sell(vanillaCookie, clients.get(0));
        // store.sell(vanillaCookie, clients.get(0));

@@ -3,12 +3,6 @@ package builders;
 import com.github.javafaker.Faker;
 import members.Employee;
 
-//    static Faker faker = new Faker();
-//    public String name;
-//    public String id=faker.number().digits(9);
-//    public String address=faker.address().fullAddress();
-//    public String phone=faker.phoneNumber().cellPhone();
-
 public class BuilderEmployee {
 
     Employee employee;
@@ -40,7 +34,6 @@ public class BuilderEmployee {
     }
 
     public Employee build(){
-        System.out.print(this.employee.getAddress());
         return this.employee;
     }
 }
