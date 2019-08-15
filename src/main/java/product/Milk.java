@@ -1,5 +1,7 @@
 package product;
 
+import Util.Util;
+
 import java.util.Queue;
 
 public class Milk extends Product {
@@ -8,5 +10,6 @@ public class Milk extends Product {
         super.price = price;
         super.quantity = quantity;
         super.items = items;
+        super.addItems(Util.generateItemsList(Integer.valueOf(quantity), super.name, super.price));
     }
 }

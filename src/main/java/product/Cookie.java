@@ -1,5 +1,6 @@
 package product;
 
+import Util.Util;
 import product.Item;
 import product.Product;
 
@@ -12,5 +13,6 @@ public class Cookie extends Product {
         super.price = price;
         super.quantity = quantity;
         super.items = items;
+        super.addItems(Util.generateItemsList(Integer.valueOf(quantity), super.name, super.price));
     }
 }

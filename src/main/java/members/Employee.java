@@ -33,6 +33,10 @@ public class Employee extends People {
         return phone;
     }
 
+    public void setPhone(String phone){
+        this.phone=phone;
+    }
+
     public void sell(Product product, Client client, Store store){
         double price = 0;
         for (int i=0; i< store.getProductList().size(); i++){

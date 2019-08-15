@@ -10,9 +10,9 @@ import java.util.List;
 
 public class Store {
 
-    private List<People> employees = new LinkedList<People>();
+    private List<People> employees;
     private String name;
-    public List<Product> productList;
+    private List<Product> productList;
     private static Store store;
 
     public Store(List<People> employees,  String name, List<Product> productList) {
@@ -33,6 +33,8 @@ public class Store {
         return this.productList;
     }
 
-
+    public List<People> getEmployees(){
+        return this.employees;
+    }
 }
 
